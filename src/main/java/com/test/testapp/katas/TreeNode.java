@@ -30,10 +30,19 @@ public class TreeNode {
 
     @Override
     public String toString() {
-        return "TreeNode{" +
-                "left=" + left +
-                ", right=" + right +
-                ", value=" + value +
-                '}';
+        if(left == null && right != null) {
+            return
+                    value + " " +
+                    right+ " ";
+        } else if(right == null && left != null) {
+            return
+                    left + " " +
+                            value+ " ";
+        } else if(right == null && left == null) {
+            return value + " ";
+        }
+        return left + " " +
+                value + " " +
+                right+ " ";
     }
 }
