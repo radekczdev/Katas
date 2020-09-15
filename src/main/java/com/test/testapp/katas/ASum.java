@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class ASum {
 
-    private static List<Long> sumsOfN = new ArrayList<>();
+    private static final List<Long> sumsOfN = new ArrayList<>();
 
     public static long findNb(long m) {
         for(int n = 0; n < m ;n++) {

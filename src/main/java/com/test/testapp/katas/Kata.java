@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Kata {
-    public static double findUniq(double arr[]) {
+    public static double findUniq(double[] arr) {
         List<Double> listOfVals = Arrays.stream(arr).boxed().collect(Collectors.toList());
         Set<Double> unique = new HashSet<>(listOfVals);
         for(Double a : unique) {

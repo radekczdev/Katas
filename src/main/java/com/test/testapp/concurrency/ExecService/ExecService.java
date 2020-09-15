@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.concurrent.*;
 
 public class ExecService {
-    private static ExecutorService executorService = Executors.newFixedThreadPool(10);
+    private static final ExecutorService executorService = Executors.newFixedThreadPool(10);
     private static String result = "";
 
     public static void main(String... args) throws ExecutionException, InterruptedException {

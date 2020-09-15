@@ -9,7 +9,7 @@ import java.util.stream.IntStream;
 
 @Getter
 public class TestApp {
-    private static Logger logger = Logger.getLogger("TestApp");
+    private static final Logger logger = Logger.getLogger("TestApp");
 
     public static void main(String[] args) {
         logger.info("Hello World!");

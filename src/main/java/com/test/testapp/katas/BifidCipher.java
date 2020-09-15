@@ -3,8 +3,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class BifidCipher {
-    private static Map<String, String> codeMap = new HashMap<>();
-    private static Map<String, String> decodeMap = new HashMap<>();
+    private static final Map<String, String> codeMap = new HashMap<>();
+    private static final Map<String, String> decodeMap = new HashMap<>();
 
     public static String encodeBifid (String key, String message) {
         if(message.length() == 0) {
@@ -50,7 +50,7 @@ public class BifidCipher {
         String result = "";
         for (int i = 0; i < fullEncoded.length()/2; i++) {
             String currentString = decodeMap.get(String.valueOf(row.charAt(i))
-                    + String.valueOf(column.charAt(i))
+                    + column.charAt(i)
             );
             result += currentString;
         }
@@ -76,8 +76,8 @@ public class BifidCipher {
         int stringPosition = 0;
         for(int m = 0; m < 5; m++) {
             for (int n=0; n < 5; n++) {
-                decodeMap.put(String.valueOf(m) + String.valueOf(n), String.valueOf(finalTableString.charAt(stringPosition)));
-                codeMap.put(String.valueOf(finalTableString.charAt(stringPosition)), String.valueOf(m) + String.valueOf(n));
+                decodeMap.put(String.valueOf(m) + n, String.valueOf(finalTableString.charAt(stringPosition)));
+                codeMap.put(String.valueOf(finalTableString.charAt(stringPosition)), String.valueOf(m) + n);
                 stringPosition++;
             }
         }

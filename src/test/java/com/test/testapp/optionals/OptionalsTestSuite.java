@@ -9,13 +9,13 @@ import java.util.function.Supplier;
 import static org.junit.jupiter.api.Assertions.*;
 
 class OptionalsTestSuite {
-    private Optional<String> empty = Optional.empty();
-    private Optional<String> nonEmpty = Optional.of("Michael!");
-    private Optional<String> withNull = Optional.ofNullable(null);
+    private final Optional<String> empty = Optional.empty();
+    private final Optional<String> nonEmpty = Optional.of("Michael!");
+    private final Optional<String> withNull = Optional.ofNullable(null);
     private String finalText;
-    private Consumer<String> printSomething = (x) -> {
+    private final Consumer<String> printSomething = (x) -> {
         finalText = "hi There " + x;};
-    private Supplier<String> supplySomething = () -> {
+    private final Supplier<String> supplySomething = () -> {
         return "George!";
     };
 
